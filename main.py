@@ -221,7 +221,7 @@ def qr1():
     # update display
     display.update()
     # Halt the Badger to save power, it will wake up if any of the front buttons are pressed
-    #display.halt()
+    display.halt()
     #print("Out of halt1")
     #print("Screen", state["current_scrn"] )
     return
@@ -239,7 +239,7 @@ def qr2():
     # Update screen
     display.update()
     # Halt the Badger to save power, it will wake up if any of the front buttons are pressed
-    #display.halt()
+    display.halt()
     #print("Out of halt2")
     #print("Screen", state["current_scrn"] )
     return
