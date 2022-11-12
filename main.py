@@ -45,7 +45,7 @@ def map_value(input, in_min, in_max, out_min, out_max):
 
 def draw_battery_icon(level, x, y):
     # Outline
-    print("Level = ", level)
+    # print("Level = ", level)
     display.thickness(1)
     display.pen(15)
     display.rectangle(x, y, 19, 10)
@@ -215,13 +215,13 @@ def qr1():
     vbat = get_battery_level()
     # Map it to 0-4
     bat = int(map_value(vbat, MIN_BATTERY_VOLTAGE, MAX_BATTERY_VOLTAGE, 0, 4))
-    print("Bat = ", bat)
+    # print("Bat = ", bat)
     # Draw Icon in top right corner
     draw_battery_icon(bat, WIDTH - 22 - 3, 3)
     # update display
     display.update()
     # Halt the Badger to save power, it will wake up if any of the front buttons are pressed
-    display.halt()
+    #display.halt()
     #print("Out of halt1")
     #print("Screen", state["current_scrn"] )
     return
@@ -239,7 +239,7 @@ def qr2():
     # Update screen
     display.update()
     # Halt the Badger to save power, it will wake up if any of the front buttons are pressed
-    display.halt()
+    #display.halt()
     #print("Out of halt2")
     #print("Screen", state["current_scrn"] )
     return
@@ -250,5 +250,6 @@ def qr2():
 
 while True:
     check_button()
+
     #print("Screen", state["current_scrn"] )
         
